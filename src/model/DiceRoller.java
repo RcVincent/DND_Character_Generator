@@ -13,24 +13,6 @@ public class DiceRoller {
 		return r.nextInt(6) + 1; 
 	}
 
-	public int[] getStats(Random r) {
-		int[] total = new int[7]; 
-		//int d1, d2, d3;
-		int[] dice = new int[3]; 
-
-		for(int k = 0; k < 7; k++) {
-			for(int i = 0; i < 3; i++) {
-				dice[i]= getRoll(r);
-
-				if(dice[i] == 1) {
-					dice[i] = getRoll(r); 
-				}
-				total[i] += dice[i];
-
-			}
-		}
-		return total;
-	}
 
 	public Random getR() {
 		return r;
